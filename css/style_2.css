@@ -1,0 +1,616 @@
+@charset "UTF-8";
+
+/*----------------------
+CSS
+作成日 : 2024/11/16
+作成者 : k.yamashita
+サイト名 : my site
+------------------------ */
+
+/* 全体 */
+html {
+    font-size: 100%;
+    color: #4d4d4d
+ }
+
+body {
+    width: 100%;
+    font-size: 100%;
+    color: #4d4d4d;
+    font-family: "Noto Sans JP", "筑紫AMゴシック", sans-serif;
+ }
+
+a {
+    text-decoration: none;
+    color: #4d4d4d
+ }
+
+  /* #header */
+#header {
+    background-color: #ee847d;;
+    position: relative;
+    padding: 1.1%;
+ }
+
+#header #site-title {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 6.5vw;
+    letter-spacing: 0.7vw;
+    color: #fff;
+    white-space: nowrap;
+}
+
+#header #site-title a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+#header #global-nav {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; 
+    width: auto;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+#header #global-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(128, 128, 128, 0.5); 
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+#header #global-nav a:hover {
+    background-color: #fff; /* ホバー時に背景を白色に */
+    color: #333; /* ホバー時のテキスト色 */
+}
+
+#header #global-nav img {
+    height: 35px;
+    margin-bottom: 5px; /* アイコンとテキストの間隔 */
+}
+
+#header #global-nav a span {
+    font-size: 12px;
+    text-align: center;
+}
+
+#header #top-img {
+  width: 100%;
+  height: 100%;
+}
+
+#header #top-img .jimbocho-A7 {
+  width: 100%;
+  height: 100%;
+}
+
+#header .couple-img {
+    width: 20%;
+    position: absolute;
+    bottom: 7%;
+    left: 25%;
+}
+
+#header .couple-img .couple {
+    width: 100%;
+  }
+
+/* #main */
+#main section {
+    width: 100%;
+    padding: 1.1%;
+    position: relative;
+}
+
+#main section .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    background-color: #fff;
+}
+
+#main section .wrapper .left-content, 
+#main section .wrapper .right-content {
+    width: 50%;
+    position: relative;
+}
+
+#main section .wrapper .left-content .trapezoid {
+    width: 28%;
+    aspect-ratio: 14 / 9 ;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 90%, 0% 100%);
+}
+
+#main section .wrapper .left-content .description {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 50px;
+}
+
+#main section .wrapper .left-content .description .description-wrapper {
+    width: 75%;
+    margin: 0 auto 30px auto;
+}
+
+#main section .wrapper .left-content .description .description-wrapper h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  vertical-align: center;
+  display: flex;
+  align-items: center;
+}
+
+#main section .wrapper .left-content .description .description-wrapper h3 b {
+  letter-spacing: 3px;
+}
+
+#main section .wrapper .left-content .description .description-wrapper h3 .category-name {
+  font-size: 20px;
+  opacity: 0.7;
+  margin-left: 40px;
+}
+
+#main section .wrapper .left-content .description .description-wrapper p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 2.0;
+    text-align: justify;
+}
+
+#main section .wrapper .left-content .couple-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:30px;
+}
+
+#main section .wrapper .right-content .category-jimbocho-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    font-size: 1vw;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+#main section .wrapper .right-content .category-name {
+    z-index: 1;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    text-align: left;
+    font-size: 1vw;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+#main section .wrapper .right-content .post-archive {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0px 40px 0px;
+}
+
+#main section .wrapper .right-content .post-archive a {
+  transition: all 0.4s;
+  border-left: dotted 2px #b3b3b3;
+}
+
+#main section .wrapper .right-content .post-archive .article {
+  width: 45%;
+  display: block;
+  /* border-left: dotted 2px #b3b3b3; */
+  background-color: #fff;
+  position: relative;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+#main section .wrapper .right-content .post-archive .article:nth-child(2n+1) {
+  margin-left: 0;
+}
+
+#main section .wrapper .right-content .post-archive .article:nth-child(2n+3),
+#main section .wrapper .right-content .post-archive .article:nth-child(2n+4) {
+  margin-top: 0;
+}
+
+#main section .wrapper .right-content .post-archive .article .article-wrapper {
+  padding: 5%;
+}
+
+#main section .wrapper .right-content .post-archive .article .article-wrapper {
+  padding: 5%;
+}
+
+#main section .wrapper .right-content .post-archive .article .article-border-top,
+#main section .wrapper .right-content .post-archive .article .article-border-bottom {
+  border-bottom: dotted 2px #b3b3b3;
+}
+
+#main section .wrapper .right-content .post-archive .article .article-wrapper .article-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+#main .wrapper .article .article-wrapper .article-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#main .wrapper .article .article-wrapper .article-description h4 {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+#main .wrapper .article .article-wrapper .article-description p {
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* #PROLOGUE */
+#main #PROLOGUE,
+#main #PROLOGUE .trapezoid {
+  background-color: #9cb6c3;
+}
+
+#main #PROLOGUE .section-icon {
+  width: 30%;
+  margin-top: 8%;
+  margin-left: 25%;
+}
+
+#main #PROLOGUE .wrapper .right-content .post-archive {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+#main #PROLOGUE .wrapper .right-content .post-archive a {
+  display: block;
+  border-left: none;
+  width: 90%;
+}
+
+#main #PROLOGUE .wrapper .right-content .post-archive a:hover {
+  background-color: #9cb6c3;
+}
+
+#main #PROLOGUE .wrapper .right-content .post-archive img {
+  width: 100%;
+  margin-top: 5px;
+}
+
+#main #PROLOGUE .category-jimbocho-logo,
+#main #PROLOGUE .category-name {
+  color: #9cb6c3;
+}
+
+#main #PROLOGUE .left-content .couple-img img{
+  width: 20%;
+}
+
+#main #PROLOGUE .right-content .category-name {
+  position: absolute;
+  bottom: 7%;
+  right: -3%;
+  z-index: 1;
+}
+
+/* #UNIV. */
+#main #UNIV,
+#main #UNIV .trapezoid {
+  background-color: #a4d0b7;
+}
+
+#main #UNIV .section-icon {
+  width: 60%;
+  margin-top: 8%;
+  margin-left: 10%;
+}
+
+#main #UNIV .left-content .couple-img img {
+  width: 25%;
+  margin-top: 10px;
+}
+
+#main #UNIV .category-jimbocho-logo,
+#main #UNIV .category-name {
+  color: #a4d0b7;
+}
+
+#main #UNIV .right-content .category-name {
+  position: absolute;
+  bottom: 9%;
+  right: -3%;
+  z-index: 1;
+}
+
+#main #UNIV a:hover{
+  background-color: #a4d0b7;
+  color: #fff;
+}
+
+/* #BOOK */
+#main #BOOK,
+#main #BOOK .trapezoid {
+  background-color: #ee847d;
+}
+
+#main #BOOK .section-icon {
+  width: 50%;
+  margin-top: 12%;
+  margin-left: 17%;
+}
+
+#main #BOOK .left-content .couple-img img {
+  width: 20%;
+  margin-top: 10px;
+}
+
+#main #BOOK .category-jimbocho-logo,
+#main #BOOK .category-name {
+  color: #ee847d;
+}
+
+#main #BOOK .right-content .category-name {
+  position: absolute;
+  bottom: 9%;
+  right: -3%;
+  z-index: 1;
+}
+
+#main #BOOK a:hover{
+  background-color: #ee847d;
+  color: #fff;
+}
+
+/* #CURRY */
+#main #CURRY,
+#main #CURRY .trapezoid {
+  background-color: #f8ca7c;
+}
+
+#main #CURRY .section-icon {
+  width: 44%;
+  margin-top: 9%;
+  margin-left: 17%;
+}
+
+#main #CURRY .left-content .couple-img img {
+  width: 34%;
+  margin-top: 10px;
+}
+
+#main #CURRY .category-jimbocho-logo,
+#main #CURRY .category-name {
+  color: #f8ca7c;
+}
+
+#main #CURRY .right-content .category-name {
+  position: absolute;
+  bottom: 9%;
+  right: -3%;
+  z-index: 1;
+}
+
+#main #CURRY a:hover{
+  background-color: #f8ca7c;
+  color: #fff;
+}
+
+/* #CAFE */
+#main #CAFE,
+#main #CAFE .trapezoid {
+  background-color: #c17839;
+}
+
+#main #CAFE .section-icon {
+  width: 36%;
+  margin-top: 7%;
+  margin-left: 20%;
+}
+
+#main #CAFE .left-content .couple-img img {
+  width: 20%;
+  margin-top: 10px;
+}
+
+#main #CAFE .category-jimbocho-logo,
+#main #CAFE .category-name {
+  color: #c17839;
+}
+
+#main #CAFE .right-content .category-name {
+  position: absolute;
+  bottom: 9%;
+  right: -3%;
+  z-index: 1;
+}
+
+#main #CAFE a:hover {
+  background-color: #c17839;
+  color: #fff;
+}
+
+/* footer */
+#footer {
+  background-color: #ee847d;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+#footer a {
+  color: #fff;
+}
+
+#footer .title {
+  padding: 60px 0;
+}
+
+#footer .title h5 {
+  font-size: 40px;
+  font-family: "筑紫AMゴシック", sans-serif;
+  letter-spacing: 20px;
+  margin-left: 40px;
+}
+
+#footer .epilogue-line {
+    display: flex;
+    margin: 0 auto 50px auto;
+}
+
+#footer .epilogue-line .white-line {
+    width: 50%;
+    border: 1px solid #fff;
+    height: 0px;
+    margin: 13px;
+}
+
+#footer .epilogue-line .typo {
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-left: 3px;
+}
+
+#footer .content p {
+  margin-bottom: 54px;
+  line-height: 2.0;
+  letter-spacing: 3px;
+  /* font-weight: bold; */
+}
+
+#footer .contact {
+    display: inline-block;
+    border: solid 1px #fff;
+    padding: 6px 20px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#footer a {
+  transition: all 0.4s;
+}
+
+#footer a:hover {
+    color: #ee847d;
+    background-color: #fff
+}
+
+#footer .couple-img {
+    width: 20%;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+
+#footer .couple-img img {
+    width: 100%;
+}
+
+
+
+
+@media screen and (max-width:1000px) {
+  
+  #main section .wrapper {
+    flex-direction: column;
+  }
+
+  #main section .wrapper .left-content, 
+  #main section .wrapper .right-content {
+    width: 100%;
+  }
+
+  #main section .wrapper .left-content .trapezoid {
+    width: 18%;
+    aspect-ratio: 14 / 9 ;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 90%, 0% 100%);
+  }
+
+  #main section .wrapper .left-content .description .description-wrapper {
+    width: 85%;
+  }
+
+  #main #PROLOGUE .left-content .couple-img img{
+    width: 10%;
+    position: absolute;
+    top: 8%;
+    right: 15%;
+  }
+
+  #main #UNIV .left-content .couple-img img{
+    width: 15%;
+    position: absolute;
+    top: 8%;
+    right: 15%;
+  }
+
+  #main #BOOK .left-content .couple-img img{
+    width: 10%;
+    position: absolute;
+    top: 8%;
+    right: 18%;
+  }
+
+  #main #CURRY .left-content .couple-img img{
+    width: 18%;
+    position: absolute;
+    top: 8%;
+    right: 15%;
+  }
+
+  #main #CAFE .left-content .couple-img img{
+    width: 12%;
+    position: absolute;
+    top: 8%;
+    right: 15%;
+  }
+
+  #main #PROLOGUE .right-content .jimbo-map a {
+    margin: 0 auto;
+  }
+
+  #main section .wrapper .right-content .category-jimbocho-logo {
+    display: none;
+  }
+
+  #main section .wrapper .right-content .category-name {
+    display: none;
+  }
+
+  #main section .wrapper .right-content .post-archive {
+    justify-content: center;
+  }
+  
+}
+
+
+
