@@ -17,7 +17,7 @@ body {
     width: 100%;
     font-size: 100%;
     color: #4d4d4d;
-    font-family: "Noto Sans JP", "筑紫AMゴシック", sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
  }
 
 a {
@@ -27,19 +27,28 @@ a {
 
   /* #header */
 #header {
-    background-color: #ee847d;;
+    background-color: #ee847d;
     position: relative;
     padding: 1.1%;
  }
 
 #header #site-title {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    font-size: 6.5vw;
-    letter-spacing: 0.7vw;
-    color: #fff;
-    white-space: nowrap;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 6.5vw;
+  letter-spacing: 0.7vw;
+  color: #fff;
+  white-space: nowrap;
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#header #site-title span {
+  color:#ee847d;
+  display: inline-block;
+  text-indent: 1em;
 }
 
 #header #site-title a {
@@ -49,44 +58,86 @@ a {
 }
 
 #header #global-nav {
-    position: absolute;
-    top: 15%;
-    right: 15%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px; 
-    width: auto;
-    padding: 12px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 0.8%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
 }
 
 #header #global-nav a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    background-color: rgba(128, 128, 128, 0.5); 
-    color: #fff;
-    border-radius: 8px;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: rgba(128, 128, 128, 0.5); 
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  margin-bottom: 10%;
 }
 
-#header #global-nav a:hover {
-    background-color: #fff; /* ホバー時に背景を白色に */
-    color: #333; /* ホバー時のテキスト色 */
+#header #global-nav .cat-map:hover {
+    background-color:  #9cb6c3;
+}
+
+#header #global-nav .cat-univ:hover {
+  background-color:  #a4d0b7;
+}
+
+#header #global-nav .cat-book:hover {
+  background-color:  #ee847d;
+}
+
+#header #global-nav .cat-curry:hover {
+  background-color:  #f8ca7c;
+}
+
+#header #global-nav .cat-cafe:hover {
+  background-color:  #c17839;
+}
+
+#header #global-nav .cat-epi:hover {
+  background-color:  #ee847d;
+}
+
+#header #global-nav .cat-map img {
+  height: 2.2vw;
+}
+
+#header #global-nav .cat-univ img {
+  height: 2.1vw;
+}
+
+#header #global-nav .cat-book img {
+  height: 2.0vw;
+}
+
+#header #global-nav .cat-curry img {
+  height: 2.5vw;
+}
+
+#header #global-nav .cat-cafe img {
+  height: 2.5vw;
+}
+
+#header #global-nav .cat-epi img {
+  height: 2.0vw;
 }
 
 #header #global-nav img {
-    height: 35px;
-    margin-bottom: 5px; /* アイコンとテキストの間隔 */
+  margin-bottom: 5px;
 }
 
 #header #global-nav a span {
-    font-size: 12px;
+    font-size: 0.7vw;
     text-align: center;
 }
 
@@ -133,9 +184,9 @@ a {
 }
 
 #main section .wrapper .left-content .trapezoid {
-    width: 28%;
-    aspect-ratio: 14 / 9 ;
-    clip-path: polygon(0% 0%, 100% 0%, 80% 90%, 0% 100%);
+  width: 28%;
+  aspect-ratio: 14 / 9 ;
+  clip-path: polygon(0% 0%, 100% 0%, 80% 90%, 0% 100%);
 }
 
 #main section .wrapper .left-content .description {
@@ -277,6 +328,7 @@ a {
 /* #PROLOGUE */
 #main #PROLOGUE,
 #main #PROLOGUE .trapezoid {
+  border-top: none;
   background-color: #9cb6c3;
 }
 
@@ -465,6 +517,8 @@ a {
   color: #fff;
   text-align: center;
   position: relative;
+  font-family: "Zen Maru Gothic", serif;
+  font-style: normal;
 }
 
 #footer a {
@@ -477,7 +531,7 @@ a {
 
 #footer .title h5 {
   font-size: 40px;
-  font-family: "筑紫AMゴシック", sans-serif;
+  font-weight: bold;
   letter-spacing: 20px;
   margin-left: 40px;
 }
@@ -509,7 +563,7 @@ a {
 
 #footer .contact {
     display: inline-block;
-    border: solid 1px #fff;
+    border: solid 0.5px #fff;
     padding: 6px 20px;
     text-align: center;
     margin-bottom: 60px;
@@ -539,6 +593,37 @@ a {
 
 
 @media screen and (max-width:1000px) {
+
+  #header #global-nav {
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-gap: 10px;  */
+  }
+  
+  #header #global-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgba(128, 128, 128, 0.5); 
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    margin-bottom: 10%;
+  }
+
+  #header #global-nav img {
+    height: 2.5vw;
+    margin-bottom: 5px;
+  }
+  
+  #header #global-nav a span {
+      font-size: 0.7vw;
+      text-align: center;
+  }
   
   #main section .wrapper {
     flex-direction: column;
