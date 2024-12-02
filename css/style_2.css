@@ -43,7 +43,7 @@ a {
   color: #fff;
   white-space: nowrap;
   font-family: "Zen Maru Gothic", serif;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -331,6 +331,10 @@ a {
   font-size: 12px;
   line-height: 1.8;
   text-align: justify;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* #PROLOGUE */
@@ -649,8 +653,13 @@ a {
     clip-path: polygon(0% 0%, 100% 0%, 80% 90%, 0% 100%);
   }
 
+  #main section .wrapper .left-content .description {
+    margin-top: 20%;
+  }
+
   #main section .wrapper .left-content .description .description-wrapper {
     width: 85%;
+    margin-bottom: 0;
   }
 
   #main #PROLOGUE .left-content .couple-img img{
@@ -702,6 +711,7 @@ a {
 
   #main section .wrapper .right-content .post-archive {
     justify-content: center;
+    padding-top: 0;
   }
   
 }
