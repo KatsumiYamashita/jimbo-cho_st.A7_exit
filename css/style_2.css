@@ -32,7 +32,7 @@ a {
   background-color: #ee847d;
   position: relative;
   padding: 1.1%;
- }
+}
 
 #header #site-title {
   position: absolute;
@@ -706,8 +706,24 @@ a {
   }
 
   #main section .wrapper .right-content .category-name {
-    display: none;
+    /* display: none; */
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    text-align: right;
+    font-size: 1.5vw;
   }
+
+  #main #PROLOGUE .wrapper .right-content .category-name,
+  #main #UNIV .wrapper .right-content .category-name.article,
+  #main #BOOK .wrapper .right-content .category-name,
+  #main #CURRY .wrapper .right-content .category-name,
+  #main #CAFE .wrapper .right-content .category-name{
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+  }
+
+  
 
   #main section .wrapper .right-content .post-archive {
     justify-content: center;
@@ -715,6 +731,13 @@ a {
   }
   
 }
+
+@media screen and (max-width:670px) {
+
+
+
+}
+
 
 
 
