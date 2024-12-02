@@ -9,27 +9,29 @@ CSS
 
 /* 全体 */
 html {
-    font-size: 100%;
-    color: #4d4d4d
+  font-size: 100%;
+  color: #4d4d4d
  }
 
 body {
-    width: 100%;
-    font-size: 100%;
-    color: #4d4d4d;
-    font-family: "Noto Sans JP", sans-serif;
+  width: 100%;
+  font-size: 100%;
+  color: #4d4d4d;
+  font-family: "Noto Sans JP", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-style: normal;
  }
 
 a {
-    text-decoration: none;
-    color: #4d4d4d
+  text-decoration: none;
+  color: #4d4d4d
  }
 
   /* #header */
 #header {
-    background-color: #ee847d;
-    position: relative;
-    padding: 1.1%;
+  background-color: #ee847d;
+  position: relative;
+  padding: 1.1%;
  }
 
 #header #site-title {
@@ -52,9 +54,9 @@ a {
 }
 
 #header #site-title a {
-    color: #fff;
-    display: block;
-    text-decoration: none;
+  color: #fff;
+  display: block;
+  text-decoration: none;
 }
 
 #header #global-nav {
@@ -137,8 +139,8 @@ a {
 }
 
 #header #global-nav a span {
-    font-size: 0.7vw;
-    text-align: center;
+  font-size: 0.7vw;
+  text-align: center;
 }
 
 #header #top-img {
@@ -159,46 +161,49 @@ a {
 }
 
 #header .couple-img .couple {
-    width: 100%;
-  }
+  width: 100%;
+}
 
 /* #main */
 #main section {
-    width: 100%;
-    padding: 1.1%;
-    position: relative;
+  width: 100%;
+  padding: 1.1%;
+  position: relative;
 }
 
 #main section .wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    position: relative;
-    background-color: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  background-color: #fff;
 }
 
 #main section .wrapper .left-content, 
 #main section .wrapper .right-content {
-    width: 50%;
-    position: relative;
+  width: 50%;
+  position: relative;
 }
 
 #main section .wrapper .left-content .trapezoid {
   width: 28%;
   aspect-ratio: 14 / 9 ;
   clip-path: polygon(0% 0%, 100% 0%, 80% 90%, 0% 100%);
+  position: absolute;
+  top: -1px;
+  left: -1px;
 }
 
 #main section .wrapper .left-content .description {
-    width: 100%;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 50px;
+  width: 100%;
+  display: inline-block;
+  /* vertical-align: top; */
+  margin-top: 28%;
 }
 
 #main section .wrapper .left-content .description .description-wrapper {
-    width: 75%;
-    margin: 0 auto 30px auto;
+  width: 75%;
+  margin: 0 auto 30px auto;
 }
 
 #main section .wrapper .left-content .description .description-wrapper h3 {
@@ -220,37 +225,41 @@ a {
 }
 
 #main section .wrapper .left-content .description .description-wrapper p {
-    font-size: 16px;
-    margin-bottom: 25px;
-    line-height: 2.0;
-    text-align: justify;
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 2.0;
+  text-align: justify;
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 #main section .wrapper .left-content .couple-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom:30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:30px;
 }
 
 #main section .wrapper .right-content .category-jimbocho-logo {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 1;
-    font-size: 1vw;
-    font-weight: bold;
-    opacity: 0.7;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  font-size: 1vw;
+  font-weight: bold;
+  opacity: 0.7;
 }
 
 #main section .wrapper .right-content .category-name {
-    z-index: 1;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    text-align: left;
-    font-size: 1vw;
-    font-weight: bold;
-    opacity: 0.7;
+  z-index: 1;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  text-align: left;
+  font-size: 1vw;
+  font-weight: bold;
+  opacity: 0.7;
 }
 
 #main section .wrapper .right-content .post-archive {
@@ -269,7 +278,6 @@ a {
 #main section .wrapper .right-content .post-archive .article {
   width: 45%;
   display: block;
-  /* border-left: dotted 2px #b3b3b3; */
   background-color: #fff;
   position: relative;
   padding-bottom: 30px;
@@ -348,15 +356,16 @@ a {
   display: block;
   border-left: none;
   width: 90%;
+  z-index: 10;
 }
 
 #main #PROLOGUE .wrapper .right-content .post-archive a:hover {
-  background-color: #9cb6c3;
+  /* background-color: #9cb6c3; */
 }
 
 #main #PROLOGUE .wrapper .right-content .post-archive img {
   width: 100%;
-  margin-top: 5px;
+  /* margin-top: 5px; */
 }
 
 #main #PROLOGUE .category-jimbocho-logo,
